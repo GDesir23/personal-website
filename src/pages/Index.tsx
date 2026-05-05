@@ -1,4 +1,5 @@
 import { ArrowUpRight, Mail, Phone, Linkedin, GraduationCap, Code2, Server, Sparkles } from "lucide-react";
+import portrait from "@/assets/gali-portrait.jpeg";
 
 const skills = ["HTML", "CSS", "Java", "SQL"];
 const marquee = ["Information Technology", "★", "Infrastructure", "★", "Networks", "★", "Systems", "★", "Cloud", "★", "Security", "★"];
