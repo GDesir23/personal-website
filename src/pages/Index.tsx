@@ -1,16 +1,218 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { ArrowUpRight, Mail, Phone, Linkedin, GraduationCap, Code2, Server, Sparkles } from "lucide-react";
 
-// IMPORTANT: Fully REPLACE this with your own code
-const PlaceholderIndex = () => {
-  // PLACEHOLDER: Replace this entire return statement with the user's app.
-  // The inline background color is intentionally not part of the design system.
-  return (
-    <div className="flex min-h-screen items-center justify-center" style={{ backgroundColor: '#fcfbf8' }}>
-      <img data-lovable-blank-page-placeholder="REMOVE_THIS" src="/placeholder.svg" alt="Your app will live here!" />
+const skills = ["HTML", "CSS", "Java", "SQL"];
+const marquee = ["Information Technology", "★", "Infrastructure", "★", "Networks", "★", "Systems", "★", "Cloud", "★", "Security", "★"];
+
+const Section = ({ id, label, title, children }: { id: string; label: string; title: string; children: React.ReactNode }) => (
+  <section id={id} className="border-t border-ink/10 py-24 md:py-32">
+    <div className="mx-auto max-w-6xl px-6">
+      <div className="mb-12 flex items-baseline justify-between gap-6">
+        <span className="font-mono-tech text-xs uppercase tracking-[0.25em] text-ink-soft">{label}</span>
+        <span className="font-mono-tech text-xs text-ink-soft">/{id}</span>
+      </div>
+      <h2 className="font-display text-5xl font-600 leading-[0.95] tracking-tight md:text-7xl text-balance">{title}</h2>
+      <div className="mt-12">{children}</div>
     </div>
+  </section>
+);
+
+const Index = () => {
+  return (
+    <main className="min-h-screen bg-paper text-ink">
+      {/* NAV */}
+      <header className="sticky top-0 z-50 border-b border-ink/10 bg-paper/80 backdrop-blur-md">
+        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+          <a href="#top" className="font-display text-xl font-800 tracking-tight">
+            Gali<span className="text-accent">.</span>
+          </a>
+          <nav className="hidden gap-8 md:flex">
+            {["About", "Education", "Skills", "Contact"].map((item) => (
+              <a key={item} href={`#${item.toLowerCase()}`} className="font-mono-tech text-xs uppercase tracking-widest text-ink-soft transition-colors hover:text-ink">
+                {item}
+              </a>
+            ))}
+          </nav>
+          <a
+            href="mailto:galidesir@gmail.com"
+            className="group inline-flex items-center gap-2 rounded-full bg-ink px-4 py-2 font-mono-tech text-xs uppercase tracking-widest text-paper transition-transform hover:-translate-y-0.5"
+          >
+            Say hi <ArrowUpRight className="h-3.5 w-3.5 transition-transform group-hover:rotate-45" />
+          </a>
+        </div>
+      </header>
+
+      {/* HERO */}
+      <section id="top" className="relative overflow-hidden">
+        <div className="absolute inset-0 grid-paper opacity-60" aria-hidden />
+        <div className="relative mx-auto max-w-6xl px-6 pb-32 pt-24 md:pt-40">
+          <div className="fade-up flex items-center gap-3 font-mono-tech text-xs uppercase tracking-[0.3em] text-ink-soft">
+            <span className="inline-block h-2 w-2 animate-pulse rounded-full bg-accent" />
+            Available for Summer 2026 internships
+          </div>
+
+          <h1 className="fade-up mt-8 font-display text-[clamp(3.5rem,11vw,10rem)] font-800 leading-[0.85] tracking-tighter text-balance" style={{ animationDelay: "0.1s" }}>
+            Gali <em className="font-400 italic text-ink-soft">Desir.</em>
+          </h1>
+
+          <div className="fade-up mt-10 grid gap-8 md:grid-cols-12" style={{ animationDelay: "0.25s" }}>
+            <div className="md:col-span-2 md:pt-2">
+              <div className="font-mono-tech text-xs uppercase tracking-widest text-ink-soft">01 — Intro</div>
+            </div>
+            <p className="md:col-span-7 font-display text-2xl leading-snug text-balance md:text-3xl">
+              Hi! I'm an <span className="bg-accent px-1.5">Information Technology</span> student at St. John's University and an aspiring{" "}
+              <span className="italic">IT Infrastructure Engineer.</span>
+            </p>
+            <div className="md:col-span-3 md:pt-2">
+              <div className="font-mono-tech text-xs uppercase tracking-widest text-ink-soft">Currently</div>
+              <div className="mt-2 font-mono-tech text-sm">
+                NYC · est. 2027<br />
+                B.S. in IT
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Marquee */}
+        <div className="border-y border-ink/10 bg-ink py-5 text-paper">
+          <div className="flex overflow-hidden">
+            <div className="marquee-track flex shrink-0 gap-10 whitespace-nowrap pr-10">
+              {[...marquee, ...marquee].map((w, i) => (
+                <span key={i} className={`font-display text-3xl ${w === "★" ? "text-accent" : "italic"}`}>
+                  {w}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ABOUT */}
+      <Section id="about" label="02 — About" title="A student focused on technology and personal growth.">
+        <div className="grid gap-10 md:grid-cols-12">
+          <p className="md:col-span-7 text-lg leading-relaxed text-ink-soft">
+            I'm building the foundation for a career in IT infrastructure — the systems, networks, and architecture that quietly keep the
+            modern world running. I care about doing good work, learning constantly, and growing into the kind of engineer teams trust with the hard problems.
+          </p>
+          <div className="md:col-span-5 md:col-start-9">
+            <div className="rounded-md border border-ink/15 bg-paper/60 p-6 backdrop-blur">
+              <Sparkles className="h-5 w-5 text-accent" strokeWidth={1.5} />
+              <h3 className="mt-4 font-display text-2xl">What drives me</h3>
+              <ul className="mt-4 space-y-2 font-mono-tech text-sm text-ink-soft">
+                <li>→ Curiosity for how systems connect</li>
+                <li>→ Discipline through daily growth</li>
+                <li>→ Building reliable foundations</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </Section>
+
+      {/* EDUCATION */}
+      <Section id="education" label="03 — Education" title="St. John's University.">
+        <div className="grid gap-6 md:grid-cols-12">
+          <div className="md:col-span-8">
+            <div className="group relative overflow-hidden rounded-md border border-ink/15 bg-ink p-10 text-paper">
+              <div className="absolute right-6 top-6 font-mono-tech text-xs uppercase tracking-widest text-paper/60">2023 — 2027</div>
+              <GraduationCap className="h-8 w-8 text-accent" strokeWidth={1.5} />
+              <h3 className="mt-6 font-display text-4xl md:text-5xl">Bachelor of Science</h3>
+              <p className="mt-2 font-display text-2xl italic text-paper/80">Information Technology</p>
+              <div className="mt-8 flex flex-wrap gap-x-8 gap-y-2 border-t border-paper/15 pt-6 font-mono-tech text-sm">
+                <span className="text-paper/60">Expected Graduation</span>
+                <span>May 2027</span>
+              </div>
+            </div>
+          </div>
+          <div className="md:col-span-4 flex flex-col justify-between gap-4">
+            <div className="rounded-md border border-ink/15 p-6">
+              <div className="font-mono-tech text-xs uppercase tracking-widest text-ink-soft">Focus</div>
+              <p className="mt-2 font-display text-xl">IT Infrastructure & Systems</p>
+            </div>
+            <div className="rounded-md bg-accent p-6">
+              <div className="font-mono-tech text-xs uppercase tracking-widest">Location</div>
+              <p className="mt-2 font-display text-xl">Queens, New York</p>
+            </div>
+          </div>
+        </div>
+      </Section>
+
+      {/* SKILLS */}
+      <Section id="skills" label="04 — Skills" title="Tools in the toolkit.">
+        <div className="grid gap-px bg-ink/15 sm:grid-cols-2 md:grid-cols-4 overflow-hidden rounded-md">
+          {skills.map((skill, i) => (
+            <div
+              key={skill}
+              className="group relative bg-paper p-8 transition-colors hover:bg-ink hover:text-paper"
+            >
+              <div className="font-mono-tech text-xs text-ink-soft group-hover:text-paper/60">0{i + 1}</div>
+              <div className="mt-12 flex items-end justify-between">
+                <span className="font-display text-4xl">{skill}</span>
+                <Code2 className="h-5 w-5 opacity-40 transition-opacity group-hover:opacity-100 group-hover:text-accent" strokeWidth={1.5} />
+              </div>
+            </div>
+          ))}
+        </div>
+        <div className="mt-8 flex items-center gap-3 font-mono-tech text-xs uppercase tracking-widest text-ink-soft">
+          <Server className="h-4 w-4" /> Always learning — currently exploring networking & systems administration
+        </div>
+      </Section>
+
+      {/* CONTACT */}
+      <section id="contact" className="border-t border-ink/10 bg-ink text-paper">
+        <div className="mx-auto max-w-6xl px-6 py-24 md:py-32">
+          <div className="mb-12 flex items-baseline justify-between gap-6">
+            <span className="font-mono-tech text-xs uppercase tracking-[0.25em] text-paper/60">05 — Contact</span>
+            <span className="font-mono-tech text-xs text-paper/60">/contact</span>
+          </div>
+          <h2 className="font-display text-6xl leading-[0.95] tracking-tight md:text-8xl text-balance">
+            Let's <em className="italic text-accent">connect.</em>
+          </h2>
+
+          <div className="mt-16 grid gap-px bg-paper/10 md:grid-cols-3 overflow-hidden rounded-md">
+            <a
+              href="mailto:galidesir@gmail.com"
+              className="group flex flex-col gap-6 bg-ink p-8 transition-colors hover:bg-accent hover:text-ink"
+            >
+              <Mail className="h-6 w-6" strokeWidth={1.5} />
+              <div>
+                <div className="font-mono-tech text-xs uppercase tracking-widest opacity-60">Email</div>
+                <div className="mt-2 font-display text-xl">galidesir@gmail.com</div>
+              </div>
+              <ArrowUpRight className="h-5 w-5 transition-transform group-hover:rotate-45" />
+            </a>
+            <a
+              href="tel:+15164257192"
+              className="group flex flex-col gap-6 bg-ink p-8 transition-colors hover:bg-accent hover:text-ink"
+            >
+              <Phone className="h-6 w-6" strokeWidth={1.5} />
+              <div>
+                <div className="font-mono-tech text-xs uppercase tracking-widest opacity-60">Phone</div>
+                <div className="mt-2 font-display text-xl">(516) 425-7192</div>
+              </div>
+              <ArrowUpRight className="h-5 w-5 transition-transform group-hover:rotate-45" />
+            </a>
+            <a
+              href="https://www.linkedin.com/"
+              target="_blank"
+              rel="noreferrer"
+              className="group flex flex-col gap-6 bg-ink p-8 transition-colors hover:bg-accent hover:text-ink"
+            >
+              <Linkedin className="h-6 w-6" strokeWidth={1.5} />
+              <div>
+                <div className="font-mono-tech text-xs uppercase tracking-widest opacity-60">Social</div>
+                <div className="mt-2 font-display text-xl">LinkedIn</div>
+              </div>
+              <ArrowUpRight className="h-5 w-5 transition-transform group-hover:rotate-45" />
+            </a>
+          </div>
+
+          <footer className="mt-20 flex flex-col items-start justify-between gap-4 border-t border-paper/15 pt-8 font-mono-tech text-xs uppercase tracking-widest text-paper/50 md:flex-row md:items-center">
+            <span>© 2026 Gali Desir</span>
+            <span>Built with intention.</span>
+          </footer>
+        </div>
+      </section>
+    </main>
   );
 };
-
-const Index = PlaceholderIndex;
 
 export default Index;
