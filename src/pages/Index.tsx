@@ -145,7 +145,7 @@ const Index = () => {
             </div>
             <div className="rounded-md bg-accent p-6">
               <div className="font-mono-tech text-xs uppercase tracking-widest">Location</div>
-              <p className="mt-2 font-display text-xl">Queens, New York</p>
+              <p className="mt-2 font-display text-xl">Baldwin, New York</p>
             </div>
           </div>
         </div>
