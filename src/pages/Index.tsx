@@ -1,4 +1,5 @@
 import { ArrowUpRight, Mail, Phone, Linkedin, GraduationCap, Code2, Server, Sparkles } from "lucide-react";
+import portrait from "@/assets/gali-portrait.jpeg";
 
 const skills = ["HTML", "CSS", "Java", "SQL"];
 const marquee = ["Information Technology", "★", "Infrastructure", "★", "Networks", "★", "Systems", "★", "Cloud", "★", "Security", "★"];
@@ -88,13 +89,28 @@ const Index = () => {
 
       {/* ABOUT */}
       <Section id="about" label="02 — About" title="A student focused on technology and personal growth.">
-        <div className="grid gap-10 md:grid-cols-12">
-          <p className="md:col-span-7 text-lg leading-relaxed text-ink-soft">
-            I'm building the foundation for a career in IT infrastructure — the systems, networks, and architecture that quietly keep the
-            modern world running. I care about doing good work, learning constantly, and growing into the kind of engineer teams trust with the hard problems.
-          </p>
-          <div className="md:col-span-5 md:col-start-9">
-            <div className="rounded-md border border-ink/15 bg-paper/60 p-6 backdrop-blur">
+        <div className="grid gap-10 md:grid-cols-12 items-start">
+          <div className="md:col-span-5">
+            <div className="relative">
+              <div className="absolute -inset-3 bg-accent -rotate-2" aria-hidden />
+              <img
+                src={portrait}
+                alt="Portrait of Gali Desir"
+                loading="lazy"
+                className="relative w-full aspect-[4/5] object-cover rounded-sm grayscale contrast-[1.05] transition-all duration-500 hover:grayscale-0"
+              />
+              <div className="mt-3 flex items-center justify-between font-mono-tech text-xs uppercase tracking-widest text-ink-soft">
+                <span>Gali Desir</span>
+                <span>NYC · 2026</span>
+              </div>
+            </div>
+          </div>
+          <div className="md:col-span-7 md:pt-2">
+            <p className="text-lg leading-relaxed text-ink-soft">
+              I'm building the foundation for a career in IT infrastructure — the systems, networks, and architecture that quietly keep the
+              modern world running. I care about doing good work, learning constantly, and growing into the kind of engineer teams trust with the hard problems.
+            </p>
+            <div className="mt-8 rounded-md border border-ink/15 bg-paper/60 p-6 backdrop-blur">
               <Sparkles className="h-5 w-5 text-accent" strokeWidth={1.5} />
               <h3 className="mt-4 font-display text-2xl">What drives me</h3>
               <ul className="mt-4 space-y-2 font-mono-tech text-sm text-ink-soft">
