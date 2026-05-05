@@ -105,19 +105,21 @@ const Index = () => {
               </div>
             </div>
           </div>
-          <p className="md:col-span-7 text-lg leading-relaxed text-ink-soft md:pt-2">
-            I'm building the foundation for a career in IT infrastructure — the systems, networks, and architecture that quietly keep the
-            modern world running. I care about doing good work, learning constantly, and growing into the kind of engineer teams trust with the hard problems.
-            <span className="mt-8 block rounded-md border border-ink/15 bg-paper/60 p-6 backdrop-blur not-italic text-ink">
+          <div className="md:col-span-7 md:pt-2">
+            <p className="text-lg leading-relaxed text-ink-soft">
+              I'm building the foundation for a career in IT infrastructure — the systems, networks, and architecture that quietly keep the
+              modern world running. I care about doing good work, learning constantly, and growing into the kind of engineer teams trust with the hard problems.
+            </p>
+            <div className="mt-8 rounded-md border border-ink/15 bg-paper/60 p-6 backdrop-blur">
               <Sparkles className="h-5 w-5 text-accent" strokeWidth={1.5} />
-              <span className="mt-4 block font-display text-2xl">What drives me</span>
-              <span className="mt-4 block space-y-2 font-mono-tech text-sm text-ink-soft">
-                <span className="block">→ Curiosity for how systems connect</span>
-                <span className="block">→ Discipline through daily growth</span>
-                <span className="block">→ Building reliable foundations</span>
-              </span>
-            </span>
-          </p>
+              <h3 className="mt-4 font-display text-2xl">What drives me</h3>
+              <ul className="mt-4 space-y-2 font-mono-tech text-sm text-ink-soft">
+                <li>→ Curiosity for how systems connect</li>
+                <li>→ Discipline through daily growth</li>
+                <li>→ Building reliable foundations</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </Section>
 
