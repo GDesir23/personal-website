@@ -46,12 +46,7 @@ const Index = () => {
       <section id="top" className="relative overflow-hidden">
         <div className="absolute inset-0 grid-paper opacity-60" aria-hidden />
         <div className="relative mx-auto max-w-6xl px-6 pb-32 pt-24 md:pt-40">
-          <div className="fade-up flex items-center gap-3 font-mono-tech text-xs uppercase tracking-[0.3em] text-ink-soft">
-            <span className="inline-block h-2 w-2 animate-pulse rounded-full bg-accent" />
-            Available for Summer 2026 internships
-          </div>
-
-          <h1 className="fade-up mt-8 font-display text-[clamp(3.5rem,11vw,10rem)] font-800 leading-[0.85] tracking-tighter text-balance" style={{ animationDelay: "0.1s" }}>
+          <h1 className="fade-up font-display text-[clamp(3.5rem,11vw,10rem)] font-800 leading-[0.85] tracking-tighter text-balance" style={{ animationDelay: "0.1s" }}>
             Gali <em className="font-400 italic text-ink-soft">Desir.</em>
           </h1>
 
