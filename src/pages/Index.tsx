@@ -76,12 +76,7 @@ const Index = () => {
             Gali<span className="text-accent">.</span>
           </a>
           <nav className="hidden gap-8 md:flex">
-            {[
-              { label: "About", href: "#about" },
-              { label: "Education", href: "#education" },
-              { label: "Experience", href: "#experience" },
-              { label: "Contact", href: "#contact" },
-            ].map((item) => (
+            {["About", "Education", "Experience", "Contact"].map((item) => (
               <a key={item} href={`#${item.toLowerCase()}`} className="font-mono-tech text-xs uppercase tracking-widest text-ink-soft transition-colors hover:text-ink">
                 {item}
               </a>
@@ -200,25 +195,33 @@ const Index = () => {
         </div>
       </Section>
 
-      {/* SKILLS */}
-      <Section id="skills" label="04 — Skills" title="Tools in the toolkit.">
-        <div className="grid gap-px bg-ink/15 sm:grid-cols-2 md:grid-cols-4 overflow-hidden rounded-md">
-          {skills.map((skill, i) => (
-            <div
-              key={skill}
-              className="group relative bg-paper p-8 transition-colors hover:bg-ink hover:text-paper"
-            >
-              <div className="font-mono-tech text-xs text-ink-soft group-hover:text-paper/60">0{i + 1}</div>
-              <div className="mt-12 flex items-end justify-between">
-                <span className="font-display text-4xl">{skill}</span>
-                <Code2 className="h-5 w-5 opacity-40 transition-opacity group-hover:opacity-100 group-hover:text-accent" strokeWidth={1.5} />
+      {/* EXPERIENCE */}
+      <Section id="experience" label="04 — Experience" title="Where I've been working.">
+        <ol className="relative space-y-6 border-l border-ink/15 pl-6 md:pl-10">
+          {experience.map((job, i) => (
+            <li key={job.org + job.role} className="group relative">
+              <span className="absolute -left-[31px] md:-left-[45px] top-2 flex h-4 w-4 items-center justify-center rounded-full bg-accent ring-4 ring-paper" aria-hidden />
+              <div className="rounded-md border border-ink/15 bg-paper p-6 md:p-8 transition-colors hover:border-ink/40">
+                <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2">
+                  <div className="font-mono-tech text-xs uppercase tracking-widest text-ink-soft">0{i + 1} · {job.org}</div>
+                  <div className="font-mono-tech text-xs uppercase tracking-widest text-ink-soft">{job.period}</div>
+                </div>
+                <h3 className="mt-3 flex items-center gap-3 font-display text-2xl md:text-3xl">
+                  <Briefcase className="h-5 w-5 text-accent" strokeWidth={1.5} />
+                  {job.role}
+                </h3>
+                <ul className="mt-4 space-y-2 text-ink-soft">
+                  {job.bullets.map((b) => (
+                    <li key={b} className="flex gap-3 leading-relaxed">
+                      <span className="font-mono-tech text-accent">→</span>
+                      <span>{b}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
-            </div>
+            </li>
           ))}
-        </div>
-        <div className="mt-8 flex items-center gap-3 font-mono-tech text-xs uppercase tracking-widest text-ink-soft">
-          <Server className="h-4 w-4" /> Always learning — currently exploring networking & systems administration
-        </div>
+        </ol>
       </Section>
 
       {/* CONTACT */}
