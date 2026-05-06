@@ -1,4 +1,4 @@
-import { ArrowUpRight, Mail, Phone, Linkedin, GraduationCap, Code2, Server, Sparkles } from "lucide-react";
+import { ArrowUpRight, Mail, Phone, Linkedin, GraduationCap, Code2, Server, Sparkles, FileDown } from "lucide-react";
 import portrait from "@/assets/gali-portrait.jpeg";
 
 const skills = ["HTML", "CSS", "Java", "SQL"];
@@ -214,6 +214,18 @@ const Index = () => {
               </div>
               <ArrowUpRight className="h-5 w-5 transition-transform group-hover:rotate-45" />
             </a>
+          </div>
+
+          <div className="mt-10 flex flex-wrap items-center gap-4">
+            <a
+              href="/resume.pdf"
+              download
+              className="group inline-flex items-center gap-3 rounded-full bg-accent px-6 py-3 font-mono-tech text-xs uppercase tracking-widest text-ink transition-transform hover:-translate-y-0.5"
+            >
+              <FileDown className="h-4 w-4" /> Download Resume
+              <ArrowUpRight className="h-3.5 w-3.5 transition-transform group-hover:rotate-45" />
+            </a>
+            <span className="font-mono-tech text-xs uppercase tracking-widest text-paper/50">PDF · Updated 2026</span>
           </div>
 
           <footer className="mt-20 flex flex-col items-start justify-between gap-4 border-t border-paper/15 pt-8 font-mono-tech text-xs uppercase tracking-widest text-paper/50 md:flex-row md:items-center">
