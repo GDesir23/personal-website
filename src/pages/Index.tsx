@@ -124,7 +124,7 @@ const leadership = [
   {
     role: "President",
     org: "St. John's Future Business Leaders of America (FBLA)",
-    period: "Jun 2025 — Present",
+    period: "May 2026 — Present",
     bullets: [
       "Selected to serve as President for the 2026 — 2027 academic year.",
       "Played a key role in earning Student Government Inc. (SGI) recognition by presenting the chapter's mission.",
@@ -135,7 +135,7 @@ const leadership = [
   {
     role: "Events Coordinator",
     org: "St. John's ACM Student Chapter",
-    period: "Mar 2024 — Present",
+    period: "Apr 2026 — Present",
     bullets: [
       "Coordinate events for the largest CS & Cybersecurity student organization at St. John's University.",
       "Partner with other campus organizations to design intriguing workshops for students in the technology field.",
