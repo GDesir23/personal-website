@@ -54,13 +54,6 @@ const experience = [
 
 const certifications = [
   {
-    name: "Google IT Support Specialization",
-    issuer: "Google",
-    issued: "Mar 2025",
-    credentialId: "X695F3GJ3MZG",
-    skills: ["IT Service Management", "Information Technology Training", "IT Hardware Support", "Information Technology"],
-  },
-  {
     name: "ServiceDesk Training",
     issuer: "St. John's University",
     issued: "Apr 2026",
@@ -83,6 +76,13 @@ const certifications = [
     issuer: "St. John's University",
     issued: "Oct 2025",
     skills: ["Cybersecurity", "Cyber Defense", "Malware Detection"],
+  },
+  {
+    name: "Google IT Support Specialization",
+    issuer: "Google",
+    issued: "Mar 2025",
+    credentialId: "X695F3GJ3MZG",
+    skills: ["IT Service Management", "Information Technology Training", "IT Hardware Support", "Information Technology"],
   },
 ];
 
