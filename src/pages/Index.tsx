@@ -76,7 +76,12 @@ const Index = () => {
             Gali<span className="text-accent">.</span>
           </a>
           <nav className="hidden gap-8 md:flex">
-            {["About", "Education", "Skills", "Contact"].map((item) => (
+            {[
+              { label: "About", href: "#about" },
+              { label: "Education", href: "#education" },
+              { label: "Experience", href: "#experience" },
+              { label: "Contact", href: "#contact" },
+            ].map((item) => (
               <a key={item} href={`#${item.toLowerCase()}`} className="font-mono-tech text-xs uppercase tracking-widest text-ink-soft transition-colors hover:text-ink">
                 {item}
               </a>
