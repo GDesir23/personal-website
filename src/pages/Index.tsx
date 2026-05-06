@@ -1,7 +1,56 @@
-import { ArrowUpRight, Mail, Phone, Linkedin, GraduationCap, Code2, Server, Sparkles, FileDown } from "lucide-react";
+import { ArrowUpRight, Mail, Phone, Linkedin, GraduationCap, Briefcase, Sparkles, FileDown } from "lucide-react";
 import portrait from "@/assets/gali-portrait.jpeg";
 
-const skills = ["HTML", "CSS", "Java", "SQL"];
+const experience = [
+  {
+    org: "African Burial Ground Memorial Foundation",
+    role: "Web Development & Cybersecurity Intern",
+    period: "Jun 2026 — Present",
+    bullets: [
+      "Strengthening website security for licensed content and e-commerce.",
+      "Researching and outlining curriculum contextualizing the African Burial Ground for NYC schools.",
+      "Advancing and promoting the site and history of the largest African cemetery in North America.",
+    ],
+  },
+  {
+    org: "St. John's University School of Law",
+    role: "Information Technology Support Assistant",
+    period: "Apr 2026 — Present",
+    bullets: [
+      "Provide technical assistance to Law School students.",
+      "On-call technician for real-time IT incidents and ticketed support requests.",
+      "Collaborate with full-time IT staff to maintain high service standards in a fast-paced academic environment.",
+    ],
+  },
+  {
+    org: "Handshake",
+    role: "AI Fellowship",
+    period: "Dec 2025 — Feb 2026",
+    bullets: [
+      "Hands-on training and evaluation of machine learning and AI models.",
+      "Worked with large datasets and refined model performance to improve efficiency.",
+    ],
+  },
+  {
+    org: "St. John's University",
+    role: "Student Ambassador",
+    period: "Aug 2025 — Present",
+    bullets: [
+      "Engage with campus events and support large-scale initiatives like Open Houses.",
+      "Guide prospective families on detailed campus tours with clear, concise information.",
+      "Address inquiries during major events with strong communication and customer service.",
+    ],
+  },
+  {
+    org: "St. John's R.I.S.E. Network",
+    role: "Network Leader (Mentor)",
+    period: "Jun 2024 — Present",
+    bullets: [
+      "Support an empowerment initiative aimed at increasing graduation rates among students of color.",
+      "Mentor freshmen with essential information for college success, fostering academic confidence.",
+    ],
+  },
+];
 const marquee = ["Information Technology", "★", "Infrastructure", "★", "Networks", "★", "Systems", "★", "Cloud", "★", "Security", "★"];
 
 const Section = ({ id, label, title, children }: { id: string; label: string; title: string; children: React.ReactNode }) => (
