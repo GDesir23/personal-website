@@ -1,4 +1,4 @@
-import { ArrowUpRight, Mail, Phone, Linkedin, GraduationCap, Briefcase, Sparkles, FileDown } from "lucide-react";
+import { ArrowUpRight, Mail, Phone, Linkedin, GraduationCap, Briefcase, Sparkles, FileDown, Award, BadgeCheck } from "lucide-react";
 import portrait from "@/assets/gali-portrait.jpeg";
 
 const experience = [
@@ -51,6 +51,64 @@ const experience = [
     ],
   },
 ];
+
+const certifications = [
+  {
+    name: "Google IT Support Specialization",
+    issuer: "Google",
+    issued: "Mar 2025",
+    credentialId: "X695F3GJ3MZG",
+    skills: ["IT Service Management", "Information Technology Training", "IT Hardware Support", "Information Technology"],
+  },
+  {
+    name: "ServiceDesk Training",
+    issuer: "St. John's University",
+    issued: "Apr 2026",
+    skills: ["Cybersecurity Incident Response", "IT Troubleshooting", "Security Protocols"],
+  },
+  {
+    name: "Information Security Policies — 900 Series",
+    issuer: "St. John's University",
+    issued: "Apr 2026",
+    skills: ["Information Security"],
+  },
+  {
+    name: "PII Security Training",
+    issuer: "St. John's University",
+    issued: "Apr 2026",
+    skills: ["Risk Management", "Data Security"],
+  },
+  {
+    name: "Core Security Training",
+    issuer: "St. John's University",
+    issued: "Oct 2025",
+    skills: ["Cybersecurity", "Cyber Defense", "Malware Detection"],
+  },
+];
+
+const awards = [
+  {
+    title: "2nd Place — Technology & Computer Science Case Competition",
+    issuer: "Future Business Leaders of America (FBLA)",
+    date: "Mar 2026",
+    description:
+      "Analyzed a real-world Naval Surface Warfare Center Carderock case and designed AEGIS — an AI-assisted programming governance framework with human-in-the-loop oversight, bias mitigation, and validation safeguards. Presented a research-backed solution integrating cybersecurity, systems engineering, and ethical AI to a panel of judges.",
+  },
+  {
+    title: "10th Place — Technology & Computer Science Case Competition",
+    issuer: "FBLA National Leadership Conference",
+    date: "Jun 2025",
+    description:
+      "Represented St. John's University on a four-person team tackling Runwayz, a career-development platform for non-degree pathways. Delivered a proposal combining mobile-first UX, machine learning, and behavioral analytics — featuring gamified onboarding, AI career-path prediction, sentiment analysis, and retention tools — earning a Top 10 national finish.",
+  },
+  {
+    title: "4th Place — Public Speaking",
+    issuer: "FBLA New Jersey Collegiate Division",
+    date: "Mar 2025",
+    description:
+      "Awarded 4th Place at the 2025 FBLA State Leadership Conference for a personal-branding speech, advancing to compete at the National Leadership Conference in Dallas, Texas.",
+  },
+];
 const marquee = ["Information Technology", "★", "Infrastructure", "★", "Networks", "★", "Systems", "★", "Cloud", "★", "Security", "★"];
 
 const Section = ({ id, label, title, children }: { id: string; label: string; title: string; children: React.ReactNode }) => (
@@ -76,7 +134,7 @@ const Index = () => {
             Gali<span className="text-accent">.</span>
           </a>
           <nav className="hidden gap-8 md:flex">
-            {["About", "Education", "Experience", "Contact"].map((item) => (
+            {["About", "Education", "Experience", "Certifications", "Awards", "Contact"].map((item) => (
               <a key={item} href={`#${item.toLowerCase()}`} className="font-mono-tech text-xs uppercase tracking-widest text-ink-soft transition-colors hover:text-ink">
                 {item}
               </a>
@@ -96,7 +154,7 @@ const Index = () => {
         <div className="absolute inset-0 grid-paper opacity-60" aria-hidden />
         <div className="relative mx-auto max-w-6xl px-6 pb-32 pt-24 md:pt-40">
           <h1 className="fade-up font-display text-[clamp(3.5rem,11vw,10rem)] font-800 leading-[0.85] tracking-tighter text-balance" style={{ animationDelay: "0.1s" }}>
-            Gali <em className="font-400 italic text-ink-soft">Desir.</em>
+            Gali Desir<span className="text-accent">.</span>
           </h1>
 
           <div className="fade-up mt-10 grid gap-8 md:grid-cols-12" style={{ animationDelay: "0.25s" }}>
@@ -224,11 +282,52 @@ const Index = () => {
         </ol>
       </Section>
 
+      {/* CERTIFICATIONS */}
+      <Section id="certifications" label="05 — Certifications" title="Credentials I've earned.">
+        <div className="grid gap-4 md:grid-cols-2">
+          {certifications.map((cert) => (
+            <div key={cert.name} className="group flex flex-col rounded-md border border-ink/15 bg-paper p-6 transition-colors hover:border-ink/40">
+              <div className="flex items-start justify-between gap-4">
+                <BadgeCheck className="h-6 w-6 text-accent" strokeWidth={1.5} />
+                <span className="font-mono-tech text-xs uppercase tracking-widest text-ink-soft">{cert.issued}</span>
+              </div>
+              <h3 className="mt-4 font-display text-xl leading-snug">{cert.name}</h3>
+              <p className="mt-1 font-mono-tech text-xs uppercase tracking-widest text-ink-soft">{cert.issuer}</p>
+              {cert.credentialId && (
+                <p className="mt-1 font-mono-tech text-xs text-ink-soft">ID · {cert.credentialId}</p>
+              )}
+              <div className="mt-4 flex flex-wrap gap-2">
+                {cert.skills.map((s) => (
+                  <span key={s} className="rounded-full border border-ink/15 px-2.5 py-1 font-mono-tech text-[10px] uppercase tracking-widest text-ink-soft">
+                    {s}
+                  </span>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </Section>
+
+      {/* AWARDS */}
+      <Section id="awards" label="06 — Awards" title="Honors and recognition.">
+        <div className="grid gap-6 md:grid-cols-3">
+          {awards.map((a) => (
+            <article key={a.title} className="group flex flex-col rounded-md border border-ink/15 bg-paper p-6 md:p-8 transition-colors hover:border-ink/40">
+              <Award className="h-7 w-7 text-accent" strokeWidth={1.5} />
+              <div className="mt-4 font-mono-tech text-xs uppercase tracking-widest text-ink-soft">{a.date}</div>
+              <h3 className="mt-2 font-display text-2xl leading-snug">{a.title}</h3>
+              <p className="mt-2 font-mono-tech text-xs uppercase tracking-widest text-ink-soft">{a.issuer}</p>
+              <p className="mt-4 text-sm leading-relaxed text-ink-soft">{a.description}</p>
+            </article>
+          ))}
+        </div>
+      </Section>
+
       {/* CONTACT */}
       <section id="contact" className="border-t border-ink/10 bg-ink text-paper">
         <div className="mx-auto max-w-6xl px-6 py-24 md:py-32">
           <div className="mb-12 flex items-baseline justify-between gap-6">
-            <span className="font-mono-tech text-xs uppercase tracking-[0.25em] text-paper/60">05 — Contact</span>
+            <span className="font-mono-tech text-xs uppercase tracking-[0.25em] text-paper/60">07 — Contact</span>
             <span className="font-mono-tech text-xs text-paper/60">/contact</span>
           </div>
           <h2 className="font-display text-6xl leading-[0.95] tracking-tight md:text-8xl text-balance">
