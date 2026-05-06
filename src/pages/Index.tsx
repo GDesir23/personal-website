@@ -1,4 +1,4 @@
-import { ArrowUpRight, Mail, Phone, Linkedin, GraduationCap, Briefcase, Sparkles, FileDown, Award, BadgeCheck } from "lucide-react";
+import { ArrowUpRight, Mail, Phone, Linkedin, GraduationCap, Briefcase, Sparkles, FileDown, Award, BadgeCheck, Users } from "lucide-react";
 import portrait from "@/assets/gali-portrait.jpeg";
 
 const experience = [
@@ -109,6 +109,40 @@ const awards = [
       "Awarded 4th Place at the 2025 FBLA State Leadership Conference for a personal-branding speech, advancing to compete at the National Leadership Conference in Dallas, Texas.",
   },
 ];
+
+const leadership = [
+  {
+    role: "Student Senator",
+    org: "St. John's Student Government Inc. (SGI)",
+    period: "Apr 2026 — Present",
+    bullets: [
+      "Elected to advocate for student needs and represent the St. John's student body.",
+      "Collaborate with fellow senators to develop laws and policies that improve the campus experience.",
+      "Engage in meaningful discussions to address concerns and implement new activities promoting student welfare.",
+    ],
+  },
+  {
+    role: "President",
+    org: "St. John's Future Business Leaders of America (FBLA)",
+    period: "Jun 2025 — Present",
+    bullets: [
+      "Selected to serve as President for the 2026 — 2027 academic year.",
+      "Played a key role in earning Student Government Inc. (SGI) recognition by presenting the chapter's mission.",
+      "Lead and participate in leadership development programs that strengthen leadership skills and personal growth.",
+      "Represent St. John's FBLA in regional and national competitions, including the 2025 & 2026 National Leadership Conferences.",
+    ],
+  },
+  {
+    role: "Events Coordinator",
+    org: "St. John's ACM Student Chapter",
+    period: "Mar 2024 — Present",
+    bullets: [
+      "Coordinate events for the largest CS & Cybersecurity student organization at St. John's University.",
+      "Partner with other campus organizations to design intriguing workshops for students in the technology field.",
+      "Build a platform where tech students learn through sessions, presentations, and hands-on programming.",
+    ],
+  },
+];
 const marquee = ["Information Technology", "★", "Infrastructure", "★", "Networks", "★", "Systems", "★", "Cloud", "★", "Security", "★"];
 
 const Section = ({ id, label, title, children }: { id: string; label: string; title: string; children: React.ReactNode }) => (
@@ -134,7 +168,7 @@ const Index = () => {
             Gali<span className="text-accent">.</span>
           </a>
           <nav className="hidden gap-8 md:flex">
-            {["About", "Education", "Experience", "Certifications", "Awards", "Contact"].map((item) => (
+            {["About", "Education", "Experience", "Leadership", "Certifications", "Awards", "Contact"].map((item) => (
               <a key={item} href={`#${item.toLowerCase()}`} className="font-mono-tech text-xs uppercase tracking-widest text-ink-soft transition-colors hover:text-ink">
                 {item}
               </a>
@@ -282,8 +316,37 @@ const Index = () => {
         </ol>
       </Section>
 
+      {/* LEADERSHIP */}
+      <Section id="leadership" label="05 — Leadership" title="Leading where it matters.">
+        <ol className="relative space-y-6 border-l border-ink/15 pl-6 md:pl-10">
+          {leadership.map((role, i) => (
+            <li key={role.org + role.role} className="group relative">
+              <span className="absolute -left-[31px] md:-left-[45px] top-2 flex h-4 w-4 items-center justify-center rounded-full bg-accent ring-4 ring-paper" aria-hidden />
+              <div className="rounded-md border border-ink/15 bg-paper p-6 md:p-8 transition-colors hover:border-ink/40">
+                <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2">
+                  <div className="font-mono-tech text-xs uppercase tracking-widest text-ink-soft">0{i + 1} · {role.org}</div>
+                  <div className="font-mono-tech text-xs uppercase tracking-widest text-ink-soft">{role.period}</div>
+                </div>
+                <h3 className="mt-3 flex items-center gap-3 font-display text-2xl md:text-3xl">
+                  <Users className="h-5 w-5 text-accent" strokeWidth={1.5} />
+                  {role.role}
+                </h3>
+                <ul className="mt-4 space-y-2 text-ink-soft">
+                  {role.bullets.map((b) => (
+                    <li key={b} className="flex gap-3 leading-relaxed">
+                      <span className="font-mono-tech text-accent">→</span>
+                      <span>{b}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </li>
+          ))}
+        </ol>
+      </Section>
+
       {/* CERTIFICATIONS */}
-      <Section id="certifications" label="05 — Certifications" title="Credentials I've earned.">
+      <Section id="certifications" label="06 — Certifications" title="Credentials I've earned.">
         <div className="grid gap-4 md:grid-cols-2">
           {certifications.map((cert) => (
             <div key={cert.name} className="group flex flex-col rounded-md border border-ink/15 bg-paper p-6 transition-colors hover:border-ink/40">
@@ -309,7 +372,7 @@ const Index = () => {
       </Section>
 
       {/* AWARDS */}
-      <Section id="awards" label="06 — Awards" title="Honors and recognition.">
+      <Section id="awards" label="07 — Awards" title="Honors and recognition.">
         <div className="grid gap-6 md:grid-cols-3">
           {awards.map((a) => (
             <article key={a.title} className="group flex flex-col rounded-md border border-ink/15 bg-paper p-6 md:p-8 transition-colors hover:border-ink/40">
@@ -327,7 +390,7 @@ const Index = () => {
       <section id="contact" className="border-t border-ink/10 bg-ink text-paper">
         <div className="mx-auto max-w-6xl px-6 py-24 md:py-32">
           <div className="mb-12 flex items-baseline justify-between gap-6">
-            <span className="font-mono-tech text-xs uppercase tracking-[0.25em] text-paper/60">07 — Contact</span>
+            <span className="font-mono-tech text-xs uppercase tracking-[0.25em] text-paper/60">08 — Contact</span>
             <span className="font-mono-tech text-xs text-paper/60">/contact</span>
           </div>
           <h2 className="font-display text-6xl leading-[0.95] tracking-tight md:text-8xl text-balance">
