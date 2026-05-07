@@ -262,14 +262,24 @@ const Index = () => {
       {/* EDUCATION */}
       <Section id="education" label="03 — Education" title="St. John's University.">
         <div className="grid gap-6 md:grid-cols-12">
-          <div className="md:col-span-8">
+          <div className="md:col-span-8 flex flex-col gap-6">
             <div className="group relative overflow-hidden rounded-md border border-ink/15 bg-ink p-10 text-paper">
-              <div className="absolute right-6 top-6 font-mono-tech text-xs uppercase tracking-widest text-paper/60">2023 — 2027</div>
+              <div className="absolute right-6 top-6 font-mono-tech text-xs uppercase tracking-widest text-paper/60">2027 — 2028</div>
               <GraduationCap className="h-8 w-8 text-accent" strokeWidth={1.5} />
-              <h3 className="mt-6 font-display text-4xl md:text-5xl">Bachelor of Science</h3>
-              <p className="mt-2 font-display text-2xl italic text-paper/80">Information Technology</p>
+              <h3 className="mt-6 font-display text-4xl md:text-5xl">Master of Science</h3>
+              <p className="mt-2 font-display text-2xl italic text-paper/80">Library and Information Science</p>
               <div className="mt-8 flex flex-wrap gap-x-8 gap-y-2 border-t border-paper/15 pt-6 font-mono-tech text-sm">
                 <span className="text-paper/60">Expected Graduation</span>
+                <span>May 2028</span>
+              </div>
+            </div>
+            <div className="group relative overflow-hidden rounded-md border border-ink/15 bg-paper p-10">
+              <div className="absolute right-6 top-6 font-mono-tech text-xs uppercase tracking-widest text-ink-soft">2023 — 2027</div>
+              <GraduationCap className="h-8 w-8 text-accent" strokeWidth={1.5} />
+              <h3 className="mt-6 font-display text-4xl md:text-5xl">Bachelor of Science</h3>
+              <p className="mt-2 font-display text-2xl italic text-ink-soft">Information Technology</p>
+              <div className="mt-8 flex flex-wrap gap-x-8 gap-y-2 border-t border-ink/15 pt-6 font-mono-tech text-sm">
+                <span className="text-ink-soft">Expected Graduation</span>
                 <span>May 2027</span>
               </div>
             </div>
@@ -281,7 +291,7 @@ const Index = () => {
             </div>
             <div className="rounded-md bg-accent p-6">
               <div className="font-mono-tech text-xs uppercase tracking-widest">Location</div>
-              <p className="mt-2 font-display text-xl">Baldwin, New York</p>
+              <p className="mt-2 font-display text-xl">Queens, New York</p>
             </div>
           </div>
         </div>
