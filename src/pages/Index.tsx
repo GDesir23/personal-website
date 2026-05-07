@@ -122,16 +122,6 @@ const leadership = [
     ],
   },
   {
-    role: "Student Senator",
-    org: "St. John's Student Government Inc. (SGI)",
-    period: "Apr 2026 — Present",
-    bullets: [
-      "Elected to advocate for student needs and represent the St. John's student body.",
-      "Collaborate with fellow senators to develop laws and policies that improve the campus experience.",
-      "Engage in meaningful discussions to address concerns and implement new activities promoting student welfare.",
-    ],
-  },
-  {
     role: "President",
     org: "St. John's Future Business Leaders of America (FBLA)",
     period: "May 2026 — Present",
@@ -140,6 +130,16 @@ const leadership = [
       "Played a key role in earning Student Government Inc. (SGI) recognition by presenting the chapter's mission.",
       "Lead and participate in leadership development programs that strengthen leadership skills and personal growth.",
       "Represent St. John's FBLA in regional and national competitions, including the 2025 & 2026 National Leadership Conferences.",
+    ],
+  },
+  {
+    role: "Student Senator",
+    org: "St. John's Student Government Inc. (SGI)",
+    period: "Apr 2026 — Present",
+    bullets: [
+      "Elected to advocate for student needs and represent the St. John's student body.",
+      "Collaborate with fellow senators to develop laws and policies that improve the campus experience.",
+      "Engage in meaningful discussions to address concerns and implement new activities promoting student welfare.",
     ],
   },
 ];
