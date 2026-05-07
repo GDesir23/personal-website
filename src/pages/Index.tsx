@@ -112,6 +112,16 @@ const awards = [
 
 const leadership = [
   {
+    role: "Events Coordinator",
+    org: "St. John's ACM Student Chapter",
+    period: "Apr 2026 — Present",
+    bullets: [
+      "Coordinate events for the largest CS & Cybersecurity student organization at St. John's University.",
+      "Partner with other campus organizations to design intriguing workshops for students in the technology field.",
+      "Build a platform where tech students learn through sessions, presentations, and hands-on programming.",
+    ],
+  },
+  {
     role: "Student Senator",
     org: "St. John's Student Government Inc. (SGI)",
     period: "Apr 2026 — Present",
@@ -130,16 +140,6 @@ const leadership = [
       "Played a key role in earning Student Government Inc. (SGI) recognition by presenting the chapter's mission.",
       "Lead and participate in leadership development programs that strengthen leadership skills and personal growth.",
       "Represent St. John's FBLA in regional and national competitions, including the 2025 & 2026 National Leadership Conferences.",
-    ],
-  },
-  {
-    role: "Events Coordinator",
-    org: "St. John's ACM Student Chapter",
-    period: "Apr 2026 — Present",
-    bullets: [
-      "Coordinate events for the largest CS & Cybersecurity student organization at St. John's University.",
-      "Partner with other campus organizations to design intriguing workshops for students in the technology field.",
-      "Build a platform where tech students learn through sessions, presentations, and hands-on programming.",
     ],
   },
 ];
