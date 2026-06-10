@@ -88,11 +88,18 @@ const certifications = [
 
 const awards = [
   {
+    title: "3rd Place — Technology & Computer Science Case Competition",
+    issuer: "FBLA National Leadership Conference",
+    date: "Jun 2026",
+    description:
+      "Represented St. John's University on a four-person team. Analyzed a real-world Naval Surface Warfare Center Carderock case and designed AEGIS — an AI-assisted programming governance framework with human-in-the-loop oversight, bias mitigation, and validation safeguards. Presented a research-backed solution integrating cybersecurity, systems engineering, and ethical AI to a panel of judges.",
+  },
+  {
     title: "2nd Place — Technology & Computer Science Case Competition",
     issuer: "Future Business Leaders of America (FBLA)",
     date: "Mar 2026",
     description:
-      "Analyzed a real-world Naval Surface Warfare Center Carderock case and designed AEGIS — an AI-assisted programming governance framework with human-in-the-loop oversight, bias mitigation, and validation safeguards. Presented a research-backed solution integrating cybersecurity, systems engineering, and ethical AI to a panel of judges.",
+      "Analyzed a real-world Naval Surface Warfare Center Carderock case and designed AEGIS — an AI-assisted programming governance framework with human-in-the-loop oversight, bias mitigation, and validation safeguards. Presented a research-backed solution integrating cybersecurity, systems engineering, and ethical AI to a panel of judges, advancing to the 2026 National Leadership Conference in Las Vegas, Nevada.",
   },
   {
     title: "10th Place — Technology & Computer Science Case Competition",
