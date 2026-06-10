@@ -382,7 +382,7 @@ const Index = () => {
       <Section id="awards" label="07 — Awards" title="Honors and recognition.">
         <div className="grid gap-6 md:grid-cols-3">
           {awards.map((a) => (
-            <article key={a.title} className="group flex flex-col rounded-md border border-ink/15 bg-paper p-6 md:p-8 transition-colors hover:border-ink/40">
+            <article key={a.title} className="group flex h-full min-h-[460px] flex-col rounded-md border border-ink/15 bg-paper p-6 md:p-8 transition-colors hover:border-ink/40">
               <Award className="h-7 w-7 text-accent" strokeWidth={1.5} />
               <div className="mt-4 font-mono-tech text-xs uppercase tracking-widest text-ink-soft">{a.date}</div>
               <h3 className="mt-2 font-display text-2xl leading-snug">{a.title}</h3>
