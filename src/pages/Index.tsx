@@ -92,7 +92,7 @@ const awards = [
     issuer: "FBLA National Leadership Conference",
     date: "Jun 2026",
     description:
-      "Represented St. John's University on a four-person team. Analyzed a real-world Naval Surface Warfare Center Carderock case and designed AEGIS — an AI-assisted programming governance framework with human-in-the-loop oversight, bias mitigation, and validation safeguards. Presented a research-backed solution integrating cybersecurity, systems engineering, and ethical AI to a panel of judges.",
+      "Earned 3rd place nationally at the 2026 FBLA Collegiate National Leadership Conference as part of a four-person team representing St. John's University. Developed AEGIS, an AI governance framework designed to enable the responsible use of AI-assisted programming in high-stakes defense engineering environments for the U.S. Navy's Naval Surface Warfare Center Carderock Division. Improved from a 10th-place national finish in 2025 to a Top 3 podium finish in 2026!",
   },
   {
     title: "2nd Place — Technology & Computer Science Case Competition",
