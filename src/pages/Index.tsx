@@ -150,7 +150,7 @@ const leadership = [
     ],
   },
 ];
-const marquee = ["Information Technology", "★", "Infrastructure", "★", "Networks", "★", "Systems", "★", "Cloud", "★", "Security", "★"];
+const marquee = ["Information Technology", "★", "Systems", "★", "Networks", "★", "Systems", "★", "Cloud", "★", "Security", "★"];
 
 const Section = ({ id, label, title, children }: { id: string; label: string; title: string; children: React.ReactNode }) => (
   <section id={id} className="border-t border-ink/10 py-24 md:py-32">
