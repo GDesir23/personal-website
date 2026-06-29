@@ -204,7 +204,7 @@ const Index = () => {
             </div>
             <p className="md:col-span-7 font-display text-2xl leading-snug text-balance md:text-3xl">
               Hi! I'm an <span className="bg-accent px-1.5">Information Technology</span> student at St. John's University and an aspiring{" "}
-              <span className="italic">IT Infrastructure Engineer.</span>
+              <span className="italic">IT Systems Engineer.</span>
             </p>
             <div className="md:col-span-3 md:pt-2">
               <div className="font-mono-tech text-xs uppercase tracking-widest text-ink-soft">Currently</div>
@@ -250,7 +250,7 @@ const Index = () => {
           </div>
           <div className="md:col-span-7 md:pt-2">
             <p className="text-lg leading-relaxed text-ink-soft">
-              I'm building the foundation for a career in IT infrastructure — the systems, networks, and architecture that quietly keep the
+              I'm building the foundation for a career in IT systems — the systems, networks, and architecture that quietly keep the
               modern world running. I care about doing good work, learning constantly, and growing into the kind of engineer teams trust with the hard problems.
             </p>
             <div className="mt-8 rounded-md border border-ink/15 bg-paper/60 p-6 backdrop-blur">
@@ -284,7 +284,7 @@ const Index = () => {
           <div className="md:col-span-4 flex flex-col justify-between gap-4">
             <div className="rounded-md border border-ink/15 p-6">
               <div className="font-mono-tech text-xs uppercase tracking-widest text-ink-soft">Focus</div>
-              <p className="mt-2 font-display text-xl">IT Infrastructure & Systems</p>
+              <p className="mt-2 font-display text-xl">IT Systems</p>
             </div>
             <div className="rounded-md bg-accent p-6">
               <div className="font-mono-tech text-xs uppercase tracking-widest">Location</div>
