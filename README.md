@@ -1,6 +1,6 @@
 # Gali Desir
 
-Hi! I'm **Gali Desir**, an Information Technology student at St. John's University and an aspiring IT Systems Engineer based in New York City.
+Hi!! I'm **Gali Desir**, an Information Technology student at St. John's University and an aspiring IT Systems Engineer based in New York City.
 
 This site is my personal portfolio — a place to share my experience, projects, certifications, leadership, and a bit of what drives me as I grow into a career in technology.
 
