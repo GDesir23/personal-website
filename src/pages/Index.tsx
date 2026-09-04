@@ -54,6 +54,12 @@ const experience = [
 
 const certifications = [
   {
+    name: "Core Certified User",
+    issuer: "Splunk",
+    issued: "Jul 2026",
+    skills: ["Splunk Cloud", "Splunk IT Service Intelligence", "Big Data Analytics"],
+  },
+  {
     name: "ServiceDesk Training",
     issuer: "St. John's University",
     issued: "Apr 2026",
