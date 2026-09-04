@@ -309,10 +309,10 @@ const Index = () => {
                   <Briefcase className="h-5 w-5 text-accent" strokeWidth={1.5} />
                   {job.role}
                 </h3>
-                <ul className="mt-4 space-y-2 text-ink-soft">
+                <ul className="mt-5 space-y-4 text-ink-soft">
                   {job.bullets.map((b) => (
-                    <li key={b} className="flex gap-3 leading-relaxed">
-                      <span className="font-mono-tech text-accent">→</span>
+                    <li key={b} className="group/item flex items-start gap-4 leading-relaxed">
+                      <span className="mt-2.5 h-px w-6 shrink-0 bg-ink/20 transition-colors group-hover/item:bg-ink" aria-hidden />
                       <span>{b}</span>
                     </li>
                   ))}
