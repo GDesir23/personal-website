@@ -7,9 +7,9 @@ const experience = [
     role: "Web Development & Cybersecurity Intern",
     period: "Jun 2026 — Aug 2026",
     bullets: [
-      "Strengthening website security for licensed content and e-commerce.",
-      "Researching and outlining curriculum contextualizing the African Burial Ground for NYC schools.",
-      "Advancing and promoting the site and history of the largest African cemetery in North America.",
+      "Hardened the website's security posture for licensed content and e-commerce assets, helping protect visitor data and organizational resources.",
+      "Researched and outlined educational curriculum that connects the history of the African Burial Ground to New York City school instruction.",
+      "Advanced the digital presence and public awareness of the largest known African cemetery in North America.",
     ],
   },
   {
@@ -17,9 +17,9 @@ const experience = [
     role: "Information Technology Support Assistant",
     period: "Apr 2026 — Present",
     bullets: [
-      "Provide technical assistance to Law School students.",
-      "On-call technician for real-time IT incidents and ticketed support requests.",
-      "Collaborate with full-time IT staff to maintain high service standards in a fast-paced academic environment.",
+      "Delivered timely, user-centered technical assistance to Law School students, faculty, and staff across devices, applications, and network access.",
+      "Served as an on-call technician for real-time IT incidents and ticketed support requests, resolving issues with professionalism and urgency.",
+      "Partnered with full-time IT staff to uphold high service standards and minimize downtime in a fast-paced academic environment.",
     ],
   },
   {
@@ -27,8 +27,8 @@ const experience = [
     role: "AI Fellowship",
     period: "Dec 2025 — Feb 2026",
     bullets: [
-      "Hands-on training and evaluation of machine learning and AI models.",
-      "Worked with large datasets and refined model performance to improve efficiency.",
+      "Completed intensive, hands-on training in the evaluation and fine-tuning of machine learning and AI models.",
+      "Worked with large datasets to refine model performance, improve accuracy, and streamline inference workflows.",
     ],
   },
   {
@@ -36,9 +36,9 @@ const experience = [
     role: "Student Ambassador",
     period: "Aug 2025 — Present",
     bullets: [
-      "Engage with campus events and support large-scale initiatives like Open Houses.",
-      "Guide prospective families on detailed campus tours with clear, concise information.",
-      "Address inquiries during major events with strong communication and customer service.",
+      "Represented the university at campus events and large-scale recruitment initiatives, including Open Houses and admitted-student programs.",
+      "Guided prospective students and families through detailed campus tours, communicating program highlights with clarity and enthusiasm.",
+      "Fielded questions at high-traffic events, using strong communication and customer service skills to create a welcoming experience.",
     ],
   },
   {
@@ -46,8 +46,8 @@ const experience = [
     role: "Network Leader (Mentor)",
     period: "Jun 2024 — Present",
     bullets: [
-      "Support an empowerment initiative aimed at increasing graduation rates among students of color.",
-      "Mentor freshmen with essential information for college success, fostering academic confidence.",
+      "Supported an empowerment initiative focused on improving graduation outcomes and closing opportunity gaps for students of color.",
+      "Mentored first-year students through the transition to college life, building academic confidence and equipping them with essential resources for success.",
     ],
   },
 ];
@@ -309,10 +309,10 @@ const Index = () => {
                   <Briefcase className="h-5 w-5 text-accent" strokeWidth={1.5} />
                   {job.role}
                 </h3>
-                <ul className="mt-5 space-y-4 text-ink-soft">
+                <ul className="mt-4 space-y-2 text-ink-soft">
                   {job.bullets.map((b) => (
-                    <li key={b} className="group/item flex items-start gap-4 leading-relaxed">
-                      <span className="mt-2.5 h-px w-6 shrink-0 bg-ink/20 transition-colors group-hover/item:bg-ink" aria-hidden />
+                    <li key={b} className="flex gap-3 leading-relaxed">
+                      <span className="font-mono-tech text-accent">→</span>
                       <span>{b}</span>
                     </li>
                   ))}
