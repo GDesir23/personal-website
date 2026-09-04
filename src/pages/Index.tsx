@@ -5,7 +5,7 @@ const experience = [
   {
     org: "African Burial Ground Memorial Foundation",
     role: "Web Development & Cybersecurity Intern",
-    period: "Jun 2026 — Present",
+    period: "Jun 2026 — Aug 2026",
     bullets: [
       "Strengthening website security for licensed content and e-commerce.",
       "Researching and outlining curriculum contextualizing the African Burial Ground for NYC schools.",
